@@ -18,6 +18,12 @@ export enum Level {
   SECONDARY = 'Secondary'
 }
 
+export enum County {
+  LONDON = 'London',
+  BUCKINGHAMSHIRE = 'Buckinghamshire',
+  KENT = 'Kent'
+}
+
 export enum Competitiveness {
   ONE = 1,
   TWO = 2,
@@ -115,7 +121,7 @@ export interface School {
   
   // Location grouping
   borough: string;
-  county: 'London' | 'Buckinghamshire' | 'Kent';
+  county: County;
   
   // Visual properties
   color: SchoolColor;

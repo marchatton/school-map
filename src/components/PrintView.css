@@ -1,0 +1,306 @@
+/* Print View Styles */
+
+.print-view {
+  display: none;
+}
+
+/* Only show when printing */
+@media print {
+  /* Hide everything else when printing */
+  body > *:not(.print-view) {
+    display: none !important;
+  }
+
+  .print-view {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    color: black !important;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Print Header */
+  .print-header {
+    text-align: center;
+    margin-bottom: 20pt;
+    padding-bottom: 10pt;
+    border-bottom: 2pt solid #000;
+    page-break-after: avoid;
+  }
+
+  .print-title {
+    font-size: 18pt !important;
+    font-weight: bold !important;
+    margin: 0 0 10pt 0 !important;
+    color: black !important;
+  }
+
+  .print-meta {
+    font-size: 10pt !important;
+    color: #333 !important;
+    display: flex;
+    justify-content: center;
+    gap: 20pt;
+  }
+
+  .print-count {
+    font-weight: bold;
+  }
+
+  /* School Cards */
+  .print-school-card {
+    page-break-inside: avoid;
+    margin-bottom: 30pt;
+    border: 1pt solid #ccc;
+    padding: 15pt;
+    background-color: white !important;
+  }
+
+  .print-school-header {
+    border-bottom: 1pt solid #ddd;
+    padding-bottom: 10pt;
+    margin-bottom: 15pt;
+    page-break-after: avoid;
+  }
+
+  .print-school-name {
+    font-size: 14pt !important;
+    font-weight: bold !important;
+    margin: 0 0 8pt 0 !important;
+    color: black !important;
+  }
+
+  .print-school-badges {
+    display: flex;
+    gap: 10pt;
+    flex-wrap: wrap;
+  }
+
+  .print-badge {
+    background-color: #f0f0f0 !important;
+    border: 1pt solid #ccc !important;
+    padding: 2pt 8pt;
+    font-size: 9pt !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3pt;
+  }
+
+  .print-badge[data-type="Grammar"] {
+    background-color: #e8f5e9 !important;
+    border-color: #4caf50 !important;
+  }
+
+  .print-badge[data-type="Private"] {
+    background-color: #e3f2fd !important;
+    border-color: #2196f3 !important;
+  }
+
+  .print-badge[data-type="State Primary"],
+  .print-badge[data-type="State Primary (Faith)"] {
+    background-color: #fff3e0 !important;
+    border-color: #ff9800 !important;
+  }
+
+  .print-badge[data-type="Comprehensive"] {
+    background-color: #fce4ec !important;
+    border-color: #e91e63 !important;
+  }
+
+  /* Sections */
+  .print-section {
+    margin-bottom: 15pt;
+    page-break-inside: avoid;
+  }
+
+  .print-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .print-section-title {
+    font-size: 11pt !important;
+    font-weight: bold !important;
+    margin: 0 0 8pt 0 !important;
+    color: black !important;
+    text-decoration: underline;
+  }
+
+  /* Info Grid */
+  .print-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8pt;
+  }
+
+  .print-info-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 10pt !important;
+  }
+
+  .print-info-item strong {
+    font-weight: bold !important;
+    color: black !important;
+    margin-bottom: 2pt;
+  }
+
+  .print-info-item span {
+    color: #333 !important;
+  }
+
+  /* Special Styles */
+  .print-website {
+    text-decoration: underline;
+    word-break: break-all;
+  }
+
+  .print-cost {
+    font-weight: bold;
+    color: #2e7d32 !important;
+  }
+
+  .print-competitiveness {
+    font-family: Arial, sans-serif !important;
+  }
+
+  .print-ofsted {
+    font-weight: bold;
+    padding: 1pt 4pt;
+    border: 1pt solid #4caf50;
+    background-color: #e8f5e9 !important;
+  }
+
+  /* Success Rates */
+  .print-success-rates {
+    font-size: 10pt !important;
+  }
+
+  .print-success-rate {
+    margin-bottom: 6pt;
+    padding-left: 10pt;
+  }
+
+  .print-success-rate strong {
+    font-weight: bold !important;
+    color: black !important;
+  }
+
+  .print-target-schools {
+    font-size: 9pt !important;
+    color: #555 !important;
+    margin-top: 2pt;
+    font-style: italic;
+  }
+
+  /* Notes */
+  .print-notes {
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+    color: #333 !important;
+    padding: 8pt;
+    background-color: #f5f5f5 !important;
+    border-left: 3pt solid #2196f3;
+  }
+
+  /* Footer */
+  .print-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30pt;
+    border-top: 1pt solid #ccc;
+    background-color: white !important;
+    display: flex;
+    align-items: center;
+    font-size: 9pt !important;
+    color: #666 !important;
+    padding: 0 20pt;
+  }
+
+  .print-footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Page Numbers */
+  .print-page-number::after {
+    content: counter(page);
+  }
+
+  /* Page Setup */
+  @page {
+    size: A4;
+    margin: 20mm 15mm 30mm 15mm;
+    counter-increment: page;
+  }
+
+  @page:first {
+    margin-top: 10mm;
+  }
+
+  /* Ensure proper page breaks */
+  .print-school-card {
+    page-break-before: auto;
+    page-break-after: auto;
+    page-break-inside: avoid;
+  }
+
+  /* Force new page for every 3rd school to prevent overflow */
+  .print-school-card:nth-child(3n) {
+    page-break-after: always;
+  }
+
+  /* Landscape orientation for comparison table */
+  @page landscape {
+    size: A4 landscape;
+  }
+
+  /* Black and white printing optimization */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Remove backgrounds for better printing */
+  .print-badge {
+    background-color: transparent !important;
+    border-width: 2pt !important;
+  }
+
+  /* Links */
+  a {
+    text-decoration: underline !important;
+    color: black !important;
+  }
+
+  /* Ensure images don't break across pages */
+  img {
+    page-break-inside: avoid;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Print-specific utilities */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+  }
+}

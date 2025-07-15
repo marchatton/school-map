@@ -1,0 +1,192 @@
+/* CSS Custom Properties (Variables) for School Map Application */
+
+:root {
+  /* School Type Colors - Matching PRD Color Coding System */
+  --color-girls-secondary: #FF69B4;    /* Pink - Girls Secondary */
+  --color-girls-primary: #9370DB;      /* Purple - Girls Primary */
+  --color-boys-secondary: #00008B;     /* Dark Blue - Boys Secondary */
+  --color-boys-primary: #87CEEB;       /* Light Blue - Boys Primary */
+  --color-coed-secondary: #228B22;     /* Green - Co-ed Secondary */
+  --color-coed-primary: #FFD700;       /* Yellow - Co-ed Primary */
+  --color-other: #FF0000;              /* Red - Other/Special categories */
+
+  /* School Type Hover Effects */
+  --color-girls-secondary-hover: #FF1493;
+  --color-girls-primary-hover: #8A2BE2;
+  --color-boys-secondary-hover: #000080;
+  --color-boys-primary-hover: #4682B4;
+  --color-coed-secondary-hover: #006400;
+  --color-coed-primary-hover: #FFA500;
+  --color-other-hover: #DC143C;
+
+  /* UI Colors */
+  --color-primary: #2563eb;            /* Primary blue for UI elements */
+  --color-primary-hover: #1d4ed8;
+  --color-secondary: #64748b;          /* Secondary gray */
+  --color-accent: #059669;             /* Success/accent green */
+  --color-warning: #d97706;            /* Warning orange */
+  --color-error: #dc2626;              /* Error red */
+
+  /* Background Colors */
+  --color-bg-primary: #ffffff;         /* Main background */
+  --color-bg-secondary: #f8fafc;       /* Secondary background */
+  --color-bg-tertiary: #f1f5f9;        /* Tertiary background */
+  --color-bg-overlay: rgba(0, 0, 0, 0.5); /* Modal overlay */
+
+  /* Text Colors */
+  --color-text-primary: #1e293b;       /* Primary text */
+  --color-text-secondary: #64748b;     /* Secondary text */
+  --color-text-muted: #94a3b8;         /* Muted text */
+  --color-text-on-dark: #ffffff;       /* Text on dark backgrounds */
+
+  /* Border Colors */
+  --color-border-light: #e2e8f0;       /* Light borders */
+  --color-border-medium: #cbd5e1;      /* Medium borders */
+  --color-border-dark: #475569;        /* Dark borders */
+
+  /* Shadow Colors */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+
+  /* Typography */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.5rem;     /* 24px */
+  --font-size-3xl: 1.875rem;   /* 30px */
+  --font-size-4xl: 2.25rem;    /* 36px */
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+
+  /* Border Radius */
+  --radius-sm: 0.125rem;    /* 2px */
+  --radius-md: 0.375rem;    /* 6px */
+  --radius-lg: 0.5rem;      /* 8px */
+  --radius-xl: 0.75rem;     /* 12px */
+  --radius-2xl: 1rem;       /* 16px */
+  --radius-full: 9999px;    /* Pill shape */
+
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 200ms ease-in-out;
+  --transition-slow: 300ms ease-in-out;
+
+  /* Map Specific Variables */
+  --map-height-mobile: 50vh;
+  --map-height-desktop: 70vh;
+  --map-controls-gap: var(--spacing-md);
+  --marker-size: 12px;
+  --marker-size-hover: 16px;
+  --marker-border-width: 2px;
+
+  /* Filter Panel */
+  --filter-panel-width: 320px;
+  --filter-panel-width-mobile: 100%;
+  --filter-item-height: 40px;
+  --filter-section-gap: var(--spacing-lg);
+
+  /* School Details Modal */
+  --modal-width: 600px;
+  --modal-width-mobile: 95vw;
+  --modal-max-height: 80vh;
+  --modal-padding: var(--spacing-xl);
+
+  /* Competitiveness Colors */
+  --competitiveness-1: #10b981;  /* Green - Easy */
+  --competitiveness-2: #84cc16;  /* Light Green */
+  --competitiveness-3: #f59e0b;  /* Yellow - Medium */
+  --competitiveness-4: #f97316;  /* Orange */
+  --competitiveness-5: #ef4444;  /* Red - Very Competitive */
+
+  /* Cost Range Colors */
+  --cost-free: var(--color-accent);
+  --cost-low: #06b6d4;
+  --cost-medium: #8b5cf6;
+  --cost-high: #ec4899;
+  --cost-very-high: #ef4444;
+}
+
+/* Dark Mode Variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Override background colors for dark mode */
+    --color-bg-primary: #0f172a;
+    --color-bg-secondary: #1e293b;
+    --color-bg-tertiary: #334155;
+    
+    /* Override text colors for dark mode */
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #cbd5e1;
+    --color-text-muted: #94a3b8;
+    
+    /* Override border colors for dark mode */
+    --color-border-light: #334155;
+    --color-border-medium: #475569;
+    --color-border-dark: #64748b;
+  }
+}
+
+/* Print Mode Variables */
+@media print {
+  :root {
+    /* Override colors for print - use grayscale where appropriate */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #ffffff;
+    --color-text-primary: #000000;
+    --color-text-secondary: #333333;
+    
+    /* Simplify shadows for print */
+    --shadow-sm: none;
+    --shadow-md: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 2px 6px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 3px 9px rgba(0, 0, 0, 0.3);
+    
+    /* Adjust spacing for print */
+    --spacing-md: 0.75rem;
+    --spacing-lg: 1rem;
+    --spacing-xl: 1.25rem;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: none;
+    --transition-normal: none;
+    --transition-slow: none;
+  }
+}

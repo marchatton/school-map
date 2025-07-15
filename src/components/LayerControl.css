@@ -1,0 +1,265 @@
+/* Layer Control Styles */
+
+/* Style the Leaflet layers control */
+.leaflet-control-layers {
+  background: var(--color-bg-primary);
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+  color: var(--color-text-primary);
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+}
+
+.leaflet-control-layers:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Collapsed state */
+.leaflet-control-layers-toggle {
+  background-image: none;
+  background-color: var(--color-bg-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.leaflet-control-layers-toggle::before {
+  content: "🗺️";
+  font-size: 18px;
+  line-height: 1;
+}
+
+.leaflet-control-layers-toggle:hover {
+  background-color: var(--color-bg-secondary);
+  transform: scale(1.05);
+}
+
+/* Expanded state */
+.leaflet-control-layers-expanded {
+  padding: var(--spacing-md);
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+  display: none;
+}
+
+/* Layer sections */
+.leaflet-control-layers-base {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.leaflet-control-layers-overlays {
+  margin-top: var(--spacing-md);
+}
+
+/* Layer labels */
+.leaflet-control-layers label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) 0;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  line-height: 1.3;
+}
+
+.leaflet-control-layers label:hover {
+  color: var(--color-primary);
+}
+
+/* Radio buttons and checkboxes */
+.leaflet-control-layers input[type="radio"],
+.leaflet-control-layers input[type="checkbox"] {
+  margin: 0;
+  accent-color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+/* Separator */
+.leaflet-control-layers-separator {
+  height: 1px;
+  background-color: var(--color-border-light);
+  margin: var(--spacing-sm) 0;
+  border: none;
+}
+
+/* Custom layer indicators */
+.map-layer-openstreetmap {
+  /* Default OpenStreetMap styling */
+}
+
+.map-layer-satellite {
+  /* Satellite layer adjustments if needed */
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.map-layer-terrain {
+  /* Terrain layer adjustments */
+  filter: contrast(1.05);
+}
+
+.map-layer-cartodb-positron {
+  /* Light theme adjustments */
+  opacity: 0.95;
+}
+
+.map-layer-cartodb-dark {
+  /* Dark theme adjustments */
+  opacity: 0.95;
+}
+
+/* Layer preview thumbnails (optional enhancement) */
+.layer-preview {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-border-light);
+  margin-right: var(--spacing-xs);
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.layer-preview.openstreetmap {
+  background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+                    linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+                    linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+                    linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+  background-size: 8px 8px;
+  background-color: #ffffff;
+}
+
+.layer-preview.satellite {
+  background: linear-gradient(135deg, #4a90e2, #7ed321, #bd10e0);
+}
+
+.layer-preview.terrain {
+  background: linear-gradient(135deg, #8B4513, #228B22, #D2691E);
+}
+
+.layer-preview.light {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.layer-preview.dark {
+  background: linear-gradient(135deg, #212529, #343a40);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .leaflet-control-layers-expanded {
+    min-width: 180px;
+    max-width: 200px;
+    padding: var(--spacing-sm);
+  }
+  
+  .leaflet-control-layers label {
+    font-size: var(--font-size-xs);
+  }
+  
+  .leaflet-control-layers-toggle {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .leaflet-control-layers-toggle::before {
+    font-size: 16px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .leaflet-control-layers {
+    background: rgba(30, 30, 30, 0.95);
+    border-color: var(--color-border-dark);
+    color: var(--color-text-primary);
+  }
+  
+  .leaflet-control-layers-toggle {
+    background-color: rgba(40, 40, 40, 0.95);
+  }
+  
+  .leaflet-control-layers-toggle:hover {
+    background-color: rgba(50, 50, 50, 0.95);
+  }
+  
+  .leaflet-control-layers-base {
+    border-bottom-color: var(--color-border-dark);
+  }
+  
+  .leaflet-control-layers-separator {
+    background-color: var(--color-border-dark);
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .leaflet-control-layers {
+    border-width: 3px;
+    border-color: currentColor;
+  }
+  
+  .leaflet-control-layers label {
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+/* Animation for layer switching */
+.leaflet-tile-container {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Loading state for tiles */
+.leaflet-tile {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.leaflet-tile[data-loading="true"] {
+  opacity: 0.7;
+}
+
+/* Custom layer control positioning */
+.leaflet-top.leaflet-right .leaflet-control-layers {
+  margin-top: 80px; /* Account for other controls */
+  margin-right: var(--spacing-md);
+}
+
+/* Enhanced visual feedback */
+.leaflet-control-layers input[type="radio"]:checked + span,
+.leaflet-control-layers input[type="checkbox"]:checked + span {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Smooth transitions */
+.leaflet-control-layers * {
+  transition: all var(--transition-fast);
+}
+
+/* Focus states for accessibility */
+.leaflet-control-layers input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.leaflet-control-layers-toggle:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

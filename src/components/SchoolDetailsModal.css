@@ -1,0 +1,547 @@
+/* School Details Modal Styles */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  padding: var(--spacing-md);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-2xl);
+  max-width: 700px;
+  max-height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-bg-secondary);
+}
+
+.modal-title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  flex: 1;
+  margin-right: var(--spacing-md);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: var(--font-size-xl);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  line-height: 1;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modal-close:hover {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+}
+
+/* Modal Body */
+.modal-body {
+  padding: var(--spacing-xl);
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* School Badges */
+.school-badges {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.school-badge {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.school-type-badge {
+  /* Color is set inline based on school.color */
+}
+
+.gender-badge {
+  background-color: var(--color-secondary);
+}
+
+.level-badge {
+  background-color: var(--color-tertiary);
+}
+
+/* Detail Sections */
+.detail-section {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.detail-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.section-title {
+  margin: 0 0 var(--spacing-md) 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: var(--spacing-xs);
+}
+
+/* Detail Grid */
+.detail-grid {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: 1fr;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.detail-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
+
+/* Special Value Styles */
+.cost-value {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-success);
+}
+
+.competitiveness-value {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-warning);
+  font-size: var(--font-size-lg);
+}
+
+.competitiveness-number {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.ofsted-rating {
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-success);
+  color: white;
+  display: inline-block;
+}
+
+.ranking-source {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-normal);
+}
+
+.detail-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-fast);
+}
+
+.detail-link:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+/* Success Rates */
+.success-rates {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.success-rate-item {
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary);
+}
+
+.success-rate-description {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.success-rate-percentage {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-success);
+  margin-bottom: var(--spacing-xs);
+}
+
+.success-rate-targets {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+/* Notes */
+.notes-content {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-info);
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+  background-color: var(--color-bg-secondary);
+}
+
+.btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-warning {
+  background-color: var(--color-warning);
+  color: white;
+  border: 2px solid var(--color-warning);
+}
+
+.btn-warning:hover {
+  background-color: var(--color-warning-hover);
+  border-color: var(--color-warning-hover);
+}
+
+.btn-warning:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-warning:disabled:hover {
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-backdrop {
+    padding: var(--spacing-sm);
+  }
+
+  .modal-content {
+    max-height: 95vh;
+    border-radius: var(--radius-lg);
+  }
+
+  .modal-header {
+    padding: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+  }
+
+  .modal-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .modal-body {
+    padding: var(--spacing-lg);
+  }
+
+  .school-badges {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .school-badge {
+    font-size: var(--font-size-xs);
+    padding: 4px var(--spacing-sm);
+  }
+
+  .detail-section {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+  }
+
+  .section-title {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .detail-grid {
+    gap: var(--spacing-sm);
+  }
+
+  .detail-item {
+    gap: 4px;
+  }
+
+  .detail-label {
+    font-size: var(--font-size-xs);
+  }
+
+  .detail-value {
+    font-size: var(--font-size-sm);
+  }
+
+  .modal-footer {
+    padding: var(--spacing-md) var(--spacing-lg);
+    flex-direction: column-reverse;
+  }
+
+  .btn {
+    width: 100%;
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-backdrop {
+    padding: 0;
+  }
+
+  .modal-content {
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .school-badges {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .modal-content {
+    background-color: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  }
+
+  .modal-header {
+    background-color: rgba(20, 20, 20, 0.8);
+    border-bottom-color: var(--color-border-dark);
+  }
+
+  .modal-footer {
+    background-color: rgba(20, 20, 20, 0.8);
+    border-top-color: var(--color-border-dark);
+  }
+
+  .detail-section {
+    border-bottom-color: var(--color-border-dark);
+  }
+
+  .success-rate-item {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .notes-content {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .modal-backdrop {
+    position: static !important;
+    background: none !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+  }
+
+  .modal-content {
+    max-width: none !important;
+    max-height: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    animation: none !important;
+  }
+
+  .modal-header {
+    background: none !important;
+    page-break-after: avoid;
+  }
+
+  .modal-close {
+    display: none !important;
+  }
+
+  .modal-footer {
+    display: none !important;
+  }
+
+  .detail-section {
+    page-break-inside: avoid;
+  }
+
+  .school-badges {
+    page-break-after: avoid;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .modal-content {
+    border: 3px solid currentColor;
+  }
+
+  .school-badge {
+    border: 2px solid currentColor;
+  }
+
+  .btn {
+    border: 2px solid currentColor !important;
+  }
+
+  .detail-link {
+    text-decoration: underline;
+  }
+}
+
+/* Accessibility */
+.modal-backdrop:focus {
+  outline: none;
+}
+
+.modal-content:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Scrollbar Styling */
+.modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: var(--color-border-medium);
+  border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-dark);
+}

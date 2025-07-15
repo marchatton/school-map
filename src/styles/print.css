@@ -1,0 +1,381 @@
+/* Print Styles for School Map Application */
+
+@media print {
+  /* Reset margins and ensure full page usage */
+  @page {
+    margin: 0.5in;
+    size: A4;
+  }
+
+  /* Hide interactive elements */
+  .no-print,
+  button:not(.print-button),
+  .filter-panel,
+  .search-bar,
+  .map-controls,
+  .modal-overlay,
+  nav,
+  .sidebar,
+  input,
+  select,
+  textarea {
+    display: none !important;
+  }
+
+  /* Ensure print content is visible */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Base print styles */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000000;
+    background: #ffffff;
+  }
+
+  /* Typography adjustments for print */
+  h1 {
+    font-size: 20pt;
+    font-weight: bold;
+    margin-bottom: 12pt;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 16pt;
+    margin-bottom: 8pt;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 12pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+  }
+
+  h4, h5, h6 {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 8pt;
+    margin-bottom: 4pt;
+    page-break-after: avoid;
+  }
+
+  p, li {
+    font-size: 11pt;
+    margin-bottom: 6pt;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* School list print formatting */
+  .school-list-print {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .school-item-print {
+    border: 1pt solid #cccccc;
+    margin-bottom: 12pt;
+    padding: 8pt;
+    page-break-inside: avoid;
+    background: #ffffff;
+  }
+
+  .school-name-print {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 4pt;
+    color: #000000;
+  }
+
+  .school-details-print {
+    font-size: 10pt;
+    margin-bottom: 2pt;
+    color: #333333;
+  }
+
+  .school-type-print {
+    font-weight: bold;
+    padding: 2pt 4pt;
+    border-radius: 2pt;
+    font-size: 9pt;
+    display: inline-block;
+    margin-right: 4pt;
+  }
+
+  /* School type colors for print - using grayscale for better contrast */
+  .school-type-grammar { 
+    background-color: #f0f0f0 !important; 
+    border: 1pt solid #999999;
+  }
+  .school-type-private { 
+    background-color: #e0e0e0 !important; 
+    border: 1pt solid #666666;
+  }
+  .school-type-primary { 
+    background-color: #f8f8f8 !important; 
+    border: 1pt solid #cccccc;
+  }
+
+  /* Competitiveness indicators for print */
+  .competitiveness-print {
+    display: inline-block;
+    margin-left: 8pt;
+    font-weight: bold;
+  }
+
+  .competitiveness-1 { color: #006400 !important; }
+  .competitiveness-2 { color: #228b22 !important; }
+  .competitiveness-3 { color: #ffa500 !important; }
+  .competitiveness-4 { color: #ff6347 !important; }
+  .competitiveness-5 { color: #dc143c !important; }
+
+  /* Cost indicators */
+  .cost-free { 
+    background-color: #f0f8f0 !important; 
+    border: 1pt solid #90ee90;
+    padding: 1pt 3pt;
+    border-radius: 2pt;
+    font-size: 9pt;
+  }
+
+  .cost-paid {
+    background-color: #fff8f0 !important;
+    border: 1pt solid #ffa500;
+    padding: 1pt 3pt;
+    border-radius: 2pt;
+    font-size: 9pt;
+  }
+
+  /* Address and contact info */
+  .school-address-print {
+    font-size: 10pt;
+    color: #666666;
+    margin-bottom: 4pt;
+    font-style: italic;
+  }
+
+  .school-website-print {
+    font-size: 10pt;
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  /* Rankings and notes */
+  .school-ranking-print {
+    font-size: 10pt;
+    color: #000000;
+    margin-bottom: 2pt;
+    font-weight: bold;
+  }
+
+  .school-notes-print {
+    font-size: 10pt;
+    color: #444444;
+    margin-top: 4pt;
+    line-height: 1.3;
+  }
+
+  /* Legend for print */
+  .print-legend {
+    margin: 16pt 0;
+    padding: 8pt;
+    border: 1pt solid #cccccc;
+    background-color: #f9f9f9 !important;
+  }
+
+  .legend-title {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-bottom: 6pt;
+    color: #000000;
+  }
+
+  .legend-item {
+    display: inline-block;
+    margin-right: 12pt;
+    margin-bottom: 4pt;
+    font-size: 9pt;
+  }
+
+  .legend-color {
+    display: inline-block;
+    width: 12pt;
+    height: 8pt;
+    margin-right: 3pt;
+    vertical-align: middle;
+    border: 1pt solid #333333;
+  }
+
+  /* Summary statistics */
+  .print-summary {
+    margin: 16pt 0;
+    padding: 8pt;
+    border: 2pt solid #333333;
+    background-color: #f5f5f5 !important;
+  }
+
+  .summary-title {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 8pt;
+    color: #000000;
+  }
+
+  .summary-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8pt;
+    font-size: 10pt;
+  }
+
+  .stat-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1pt dotted #cccccc;
+    padding-bottom: 2pt;
+  }
+
+  .stat-label {
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .stat-value {
+    color: #333333;
+  }
+
+  /* Page breaks */
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .page-break-after {
+    page-break-after: always;
+  }
+
+  .page-break-inside-avoid {
+    page-break-inside: avoid;
+  }
+
+  /* Table styles for print */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12pt;
+    font-size: 10pt;
+  }
+
+  th, td {
+    border: 1pt solid #cccccc;
+    padding: 4pt;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f0f0f0 !important;
+    font-weight: bold;
+    font-size: 9pt;
+  }
+
+  /* Print header */
+  .print-header {
+    text-align: center;
+    margin-bottom: 16pt;
+    padding-bottom: 8pt;
+    border-bottom: 2pt solid #333333;
+  }
+
+  .print-title {
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 4pt;
+    color: #000000;
+  }
+
+  .print-subtitle {
+    font-size: 12pt;
+    color: #666666;
+    margin-bottom: 2pt;
+  }
+
+  .print-date {
+    font-size: 10pt;
+    color: #999999;
+  }
+
+  /* Print footer */
+  .print-footer {
+    position: fixed;
+    bottom: 0.3in;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 9pt;
+    color: #666666;
+    border-top: 1pt solid #cccccc;
+    padding-top: 4pt;
+  }
+
+  /* Multi-column layout for school lists */
+  .schools-column-layout {
+    column-count: 2;
+    column-gap: 16pt;
+    column-rule: 1pt solid #cccccc;
+  }
+
+  /* Ensure links are readable in print */
+  a {
+    color: #000000 !important;
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666666;
+  }
+
+  /* Hide URL for internal links */
+  a[href^="#"]:after,
+  a[href^="/"]:after {
+    content: "";
+  }
+
+  /* Print-specific utility classes */
+  .print-show { display: block !important; }
+  .print-hide { display: none !important; }
+  .print-inline { display: inline !important; }
+  .print-flex { display: flex !important; }
+
+  /* Avoid breaking elements across pages */
+  .avoid-page-break {
+    page-break-inside: avoid;
+  }
+
+  /* Force page breaks */
+  .force-page-break {
+    page-break-before: always;
+  }
+
+  /* High contrast for better print readability */
+  .high-contrast {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1pt solid #000000 !important;
+  }
+}

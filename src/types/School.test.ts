@@ -3,6 +3,7 @@ import {
   SchoolType, 
   Gender, 
   Level, 
+  County,
   Competitiveness, 
   SchoolColor,
   SchoolFilters 
@@ -64,7 +65,7 @@ describe('School Types', () => {
       competitiveness: Competitiveness.THREE,
       notes: 'Test notes',
       borough: 'Test Borough',
-      county: 'London',
+      county: County.LONDON,
       color: SchoolColor.COED_SECONDARY
     };
 

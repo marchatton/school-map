@@ -21,7 +21,7 @@ Guidelines for managing task lists in markdown files to track progress on comple
     - **Only if all tests pass**: Stage changes (`git add .`)
     - **Clean up**: Remove any temporary files and temporary code before committing
     - **Commit**: Use a descriptive commit message that:
-      - Uses conventional commit format (`feat:`, `fix:`, `refactor:`, etc.)
+      - Uses conventional commit format (`feat:`, `fix:`, `refactor:`, `chore:`, etc.)
       - Summarizes what was accomplished in the parent task
       - Lists key changes and additions
       - References the task number and PRD context

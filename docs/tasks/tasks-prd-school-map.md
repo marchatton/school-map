@@ -29,10 +29,10 @@
 - [ ] 1.0 Set up project foundation and parse school data
   - [x] 1.1 Initialize React/TypeScript project with necessary dependencies (leaflet, react-leaflet, etc.)
   - [x] 1.2 Create TypeScript interfaces for School data matching the markdown structure
-  - [ ] 1.3 Implement markdown parser to extract school data into structured format
-  - [ ] 1.4 Create geocoding utility to convert school addresses to coordinates
-  - [ ] 1.5 Build data validation to ensure all schools have valid coordinates
-  - [ ] 1.6 Set up basic CSS structure with color constants matching PRD specifications
+  - [x] 1.3 Implement markdown parser to extract school data into structured format
+  - [x] 1.4 Create geocoding utility to convert school addresses to coordinates
+  - [x] 1.5 Build data validation to ensure all schools have valid coordinates
+  - [x] 1.6 Set up basic CSS structure with color constants matching PRD specifications
 
 - [ ] 2.0 Implement core map functionality with school markers
   - [ ] 2.1 Set up Leaflet/OpenStreetMap base map component centered on London
